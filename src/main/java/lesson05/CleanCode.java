@@ -2,29 +2,16 @@ package lesson05;
 
 public class CleanCode {
 
-    //Правила наименования переменных
-    //lowerCamelCase
-    int currentPage = 10;
-    String userName = "max";
-    String passwordGrad = "2323 eee 2i2";
-    //is, can, hat, isAvailable, canExecute.....
-    boolean hasChildren = true;
+    public static void main(String[] args) {
+        int numberX = 20;
+        int numberY = 30;
+        int numberZ = 40;
+        if (numberX<numberY&&numberY<numberZ);
 
-    //Правила наименования методов
-    public int calculateTax(){
-        return 0;
-    }
-    public void printDocument(){
-        System.out.println("Document....");
-    }
+        System.out.println(numberX + "< " + numberY + "<" + numberZ);
 
-    public String findUserByUsername(){
-        return "max";
-    }
 
-    public void doIt(){
+
 
     }
-
-
 }
