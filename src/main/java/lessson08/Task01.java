@@ -38,10 +38,15 @@ public class Task01 {
         int min = 0;
         int max = 0;
         boolean isFirst = true;
+        boolean numberPositiv = true;
         do {
 
             System.out.println("Введите число: ");
             num = scanner.nextInt();
+            if (num < 0 ){
+                numberPositiv = false;
+                break;
+            }
             if(isFirst) {
                 min = num;
                 max = num;
@@ -54,7 +59,7 @@ public class Task01 {
                 min = number;
             }
         }
-        while (num >= 0);
+        while (num >= 0 &&  numberPositiv);
         System.out.println("Программа завершена");
     }
 }
