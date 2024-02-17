@@ -1,0 +1,16 @@
+
+Y
+java:S1854"7Remove this useless assignment to local variable "sum".(Îž½‘ûÿÿÿÿ8ß¬ÐžÚ1
+G	java:S106
+"+Replace this use of System.out by a logger.(°‚ˆÍ8’‚‡žÚ1
+G	java:S106"+Replace this use of System.out by a logger.(²™Çþ8“‚‡žÚ1
+G	java:S106"+Replace this use of System.out by a logger.(ÞÚ·±8ä‚ŒžÚ1
+G	java:S106"+Replace this use of System.out by a logger.(°‚ˆÍ8å‚ŒžÚ1
+X	java:S125"<This block of commented-out lines of code should be removed.(¾™«Ô8ý¤žÚ1
+G	java:S106"+Replace this use of System.out by a logger.(‚¨Ö§8¸¥®žÚ1
+L	java:S106"+Replace this use of System.out by a logger.(œÚá±üÿÿÿÿ8¸¥®žÚ1
+F	java:S106 "+Replace this use of System.out by a logger.(Ù—ý(8’‚½žÚ1
+L	java:S106$"+Replace this use of System.out by a logger.(ªÄÎ²ûÿÿÿÿ8ãÇ½žÚ1
+L	java:S106&"+Replace this use of System.out by a logger.(ÄƒÓ˜ùÿÿÿÿ8Ë¨¾žÚ1
+G	java:S106("+Replace this use of System.out by a logger.(µÉÄ‰8ÓÒÇžÚ1
+L	java:S106*"+Replace this use of System.out by a logger.(Ûíšúÿÿÿÿ8†ºÈžÚ1
