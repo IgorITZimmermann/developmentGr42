@@ -21,10 +21,10 @@ public class TaskArray {
         salaryMaria[6] = 250;
 
         /**int minSalaryMaria = getMinSalary(salaryMaria);
-        System.out.println(minSalaryMaria);
-        System.out.println(checkElementsInArray(salaryMaria));*/
-        int[] firstArray = {1,2,3,4};
-        int[] secontArray = {6,7,8};
+         System.out.println(minSalaryMaria);
+         System.out.println(checkElementsInArray(salaryMaria));*/
+        int[] firstArray = {1, 2, 3, 4};
+        int[] secontArray = {6, 7, 8};
         sumArraysNew(firstArray, secontArray);
     }
 
@@ -56,27 +56,27 @@ public class TaskArray {
     6,7,8 --arrayTwo->
     <-sumArray- 1,2,3,4,6,7,8
      */
-    public static int[] sumArrays(int [] arrayOne,
-                                  int [] arrayTwo){
-     int[]sumArray = new int[arrayOne.length + arrayTwo.length];
-     for (int i=0; i < arrayOne.length; i ++){
-         sumArray[i] = arrayOne[i];
-     }
-     for (int i = 0; i < arrayTwo.length; i++ ){
-         sumArray[i+arrayOne.length] = arrayTwo[i];
-     }
-     return  sumArray;
+    public static int[] sumArrays(int[] arrayOne,
+                                  int[] arrayTwo) {
+        int sumArrayLength = arrayOne.length + arrayTwo.length;
+        int[] sumArray = new int[sumArrayLength];
+        for (int i = 0; i < arrayOne.length; i++) {
+            sumArray[i] = arrayOne[i];
+        }
+        for (int i = 0; i < arrayTwo.length; i++) {
+            sumArray[i + arrayOne.length] = arrayTwo[i];
+        }
+        Arrays.sort(sumArray);
+        return sumArray;
     }
 
-    public static int[] sumArraysNew(int [] arrayOne,
-                                  int [] arrayTwo){
-        int[]sumArray = new int[arrayOne.length + arrayTwo.length];
-        System.arraycopy(arrayOne,0,sumArray, 0, arrayOne.length);
-        System.arraycopy(arrayTwo,0,sumArray, arrayOne.length, arrayTwo.length);
+    public static int[] sumArraysNew(int[] arrayOne,
+                                     int[] arrayTwo) {
+        int[] sumArray = new int[arrayOne.length + arrayTwo.length];
+        System.arraycopy(arrayOne, 0, sumArray, 0, arrayOne.length);
+        System.arraycopy(arrayTwo, 0, sumArray, arrayOne.length, arrayTwo.length);
         Arrays.sort(sumArray);
         return sumArray;
 
     }
-
-
 }
