@@ -1,10 +1,12 @@
 package homework09;
 
+
 import java.util.Scanner;
 
 public class Task02 {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
         char gameChoice;
         do {
             int randomNumber = (int) (Math.random() * 100) + 1;
@@ -27,7 +29,8 @@ public class Task02 {
                 if(number > randomNumber){
                     System.out.println("Число слишком большое");
                 }
-                else  if (number < randomNumber){
+                else
+                    if (number < randomNumber){
                     System.out.println("Число слишком маленькое");
                 }
                 else  {
@@ -47,6 +50,5 @@ public class Task02 {
         while (gameChoice == 'y');
         System.out.println("Конец игры. Спасибо за игру");
         scanner.close();
-
     }
 }

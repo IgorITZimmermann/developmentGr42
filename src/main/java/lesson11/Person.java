@@ -33,4 +33,8 @@ public class Person {
     public String getSex() {
         return sex;
     }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
