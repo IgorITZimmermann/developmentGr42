@@ -18,7 +18,16 @@ public class JavaFor {
         for ( ; i < 10 && y >0; i++, y--){
             System.out.println(i + " " + y);
         }
+        sum(20,40);
 
-        String str = "hallo;";
+
+    }
+
+
+
+    public static void sum (double a, int b){
+        System.exit(1);
+        System.out.println(a + b);
+
     }
 }
