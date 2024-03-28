@@ -1,6 +1,6 @@
 package homework08;
 
-public class Task01 {
+public class Task01     {
     //Напечатать в консоль все парные числа (четные) от 1 до 20
     public static void main(String[] args) {
         int odd = 2;
