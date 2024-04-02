@@ -16,6 +16,7 @@ public class TestBook {
 
         System.out.println("------");
         bookHashSet.add(pilevinNewBook);
+        //Nach der Prüfung
         System.out.println(bookHashSet);
 
 
