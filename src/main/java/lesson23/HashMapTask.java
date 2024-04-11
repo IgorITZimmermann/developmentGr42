@@ -75,11 +75,21 @@ public class HashMapTask {
         Очистите HashMap `studentGrades` от всех записей.
         Проверьте, пуст ли он после этого, и выведите соответствующее сообщение.
          */
-        studentGrades.clear();
+        //studentGrades.clear();
         if (studentGrades.isEmpty()) {
             System.out.println("HashMap studentGrades пуст после очистки.");
         } else {
             System.out.println("HashMap studentGrades не пуст после очистки.");
         }
+
+        System.out.println("Romove");
+        for (Map.Entry<String, Integer> entry : studentGrades.entrySet()) {
+            String name = entry.getKey();
+
+            if (name.equals("Иван")) {
+                studentGrades.remove("Иван");
+            }
+        }
+        System.out.println();
     }
 }
