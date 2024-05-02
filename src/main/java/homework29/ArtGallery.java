@@ -10,6 +10,7 @@ public class ArtGallery {
         return allArtGallery;
     }
 
+
     // добавление арт объектов
     public void addArtwork(Artwork artwork) {
         allArtGallery.add(artwork);

@@ -16,11 +16,10 @@ public enum AccessLevel {
     public boolean canWrite(){
         return this.level >= WRITE.level;
     }
+
     public  boolean isAdmin(){
         return this.level == ADMIN.level;
     }
-
-
 
 
 }
