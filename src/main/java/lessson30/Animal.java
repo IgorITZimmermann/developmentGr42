@@ -1,5 +1,7 @@
 package lessson30;
 
+import java.util.List;
+
 abstract class Animal {
 
     //абстрактный метод
@@ -13,6 +15,8 @@ abstract class Animal {
     void eat(){
         System.out.println("Ест");
     }
+
+
 
 
 

@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class HashMapJava {
     public static void main(String[] args) {
-        HashMap<String, String> hashMap = new HashMap<>();
+        Map<String, String> hashMap = new HashMap<>();
 
         hashMap.put("Audi", "Deutschland");
         hashMap.put("BMW", "Deutschland");
