@@ -52,5 +52,16 @@ public class UtilMathString {
         return Stream.of("apple", "banana", "cherry");
     }
 
+    private double divide(int a, int b){
+        if(b == 0){
+            System.out.println("Деление на 0 !!!!");
+            return -1;
+        }
+        else {
+            //Указание на расчет деления в формате double
+            return (double) a/b;
+        }
+    }
+
 
 }

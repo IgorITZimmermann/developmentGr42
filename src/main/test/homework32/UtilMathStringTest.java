@@ -8,11 +8,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UtilMathStringTest {
@@ -168,6 +172,16 @@ public class UtilMathStringTest {
     void testMaxvalueCsvFile(int a, int b, int expected) {
         System.out.println("argument a " +a  + " argument b " + b + " expected " + expected);
         assertEquals(expected, testsWork.max(a, b));
+        assertTimeoutPreemptively(Duration.ofMillis(100),()-> testsWork.max(a, b));
+    }
+
+    @Test
+    void testDivide() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        //assertEquals(2.5, testsWork.divide(5, 2));
+        Method privateMethod = UtilMathString.class.getDeclaredMethod("divide", int.class, int.class);
+        privateMethod.setAccessible(true);
+        double result = (double) privateMethod.invoke(testsWork,30, 10);
+        assertEquals(3, result);
     }
 
 
