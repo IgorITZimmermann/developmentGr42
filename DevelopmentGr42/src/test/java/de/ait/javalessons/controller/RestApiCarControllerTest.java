@@ -19,7 +19,8 @@ public class RestApiCarControllerTest {
 
     @BeforeEach
     void setUp() {
-        restApiCarController = new RestApiCarController();
+        //TODO
+        restApiCarController = new RestApiCarController(null);
     }
 
     @Test
