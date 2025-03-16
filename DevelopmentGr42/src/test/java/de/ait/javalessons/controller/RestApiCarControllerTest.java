@@ -1,8 +1,11 @@
 package de.ait.javalessons.controller;
 
 import de.ait.javalessons.model.Car;
+import de.ait.javalessons.repositories.CarRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
@@ -13,14 +16,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@SpringBootTest
 public class RestApiCarControllerTest {
 
     private RestApiCarController restApiCarController;
 
+
+    @Autowired
+    private CarRepository carRepository;
+
+
     @BeforeEach
     void setUp() {
         //TODO
-        restApiCarController = new RestApiCarController(null);
+        restApiCarController = new RestApiCarController(carRepository);
     }
 
     @Test
@@ -29,7 +38,7 @@ public class RestApiCarControllerTest {
         List<Car> resultCars = new ArrayList<>();
         resultCarsIterable.forEach(resultCars::add);
 
-        assertEquals(4, resultCars.size());
+        assertEquals(5, resultCars.size());
         assertEquals("BMW M1", resultCars.get(0).getName());
     }
 
@@ -80,12 +89,12 @@ public class RestApiCarControllerTest {
         Iterable<Car> resultCarsIterable = restApiCarController.getCars();
         List<Car> resultCars = new ArrayList<>();
         resultCarsIterable.forEach(resultCars::add);
-        assertEquals(4, resultCars.size());
+        assertEquals(5, resultCars.size());
         restApiCarController.deleteCar("1");
         Iterable<Car> resultCarsIterableDeletedCar = restApiCarController.getCars();
         resultCars =  new ArrayList<>();
         resultCarsIterableDeletedCar.forEach(resultCars::add);
-        assertEquals(3, resultCars.size());
+        assertEquals(4, resultCars.size());
     }
 
 
