@@ -10,6 +10,6 @@ public class BcryptUtil {
         System.out.println(password + "-->"+ encodetPassword);
     }
 
-    //userpass-->$2a$10$XTYrfRQzPUDsJ.smAKwRougTNtZ80Ak267mGWnaYYQMZG9KaZD2jy
+    //userpass--> $2a$10$XTYrfRQzPUDsJ.smAKwRougTNtZ80Ak267mGWnaYYQMZG9KaZD2jy
     //adminpass-->$2a$10$pSM3dZIRXDX9qX2R94tF1ehbH6HcKGwApQJDwl3NmC8bvmlIbmqrK
 }

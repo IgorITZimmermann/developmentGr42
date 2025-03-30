@@ -3,6 +3,7 @@ package de.ait.javalessons.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -24,8 +25,9 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/public/**", "/h2-console/**").permitAll()
+                        .requestMatchers("/", "/register", "/public/**", "/h2-console/**", "/cars/**").permitAll()
                         .anyRequest().authenticated())
+                .formLogin(Customizer.withDefaults())
                 .logout(logout -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET")).permitAll());
         http.headers(headers -> headers.frameOptions().disable());

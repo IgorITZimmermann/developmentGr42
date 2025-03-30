@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoContoller {
 
-    @GetMapping("/")
+    /**@GetMapping("/info")
     public String homepage(){
         return "Главная страница";
     }
 
-    @GetMapping("/public/info")
+    @GetMapping("/public/information")
     public String publishInfoPage(){
         return "Страница доступна без авторизации";
     }
@@ -24,6 +24,6 @@ public class DemoContoller {
     @GetMapping("/admin/dashboard")
     public String adminDashnoard(){
         return "Админский раздел";
-    }
+    }*/
 
 }

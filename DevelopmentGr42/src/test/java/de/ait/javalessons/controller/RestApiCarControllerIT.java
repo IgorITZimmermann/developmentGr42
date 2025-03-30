@@ -31,8 +31,8 @@ public class RestApiCarControllerIT {
     void testGetCarsReturnDefaultCars() {
         ResponseEntity<Car[]> response = testRestTemplate.getForEntity(BASE_URL, Car[].class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(4, response.getBody().length);
-        assertEquals("BMW M1", response.getBody()[0].getName());
+        assertEquals(5, response.getBody().length);
+        assertEquals("Tesla Model S", response.getBody()[0].getName());
 
     }
 
@@ -40,7 +40,7 @@ public class RestApiCarControllerIT {
     void testGetCarByIdWasFound() {
         ResponseEntity<Car> response = testRestTemplate.getForEntity(BASE_URL + "/1", Car.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("BMW M1", response.getBody().getName());
+        assertEquals("Tesla Model S", response.getBody().getName());
         assertEquals("1", response.getBody().getId());
     }
 
